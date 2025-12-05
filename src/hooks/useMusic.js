@@ -40,5 +40,7 @@ const songs = [
 
 export const useMusic = () => {
     // Hook logic here
-    const [allSongs, setAllSongs] = useState([]);
+    const [allSongs, setAllSongs] = useState(songs);
+
+    return { allSongs }
 };
