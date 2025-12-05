@@ -3,10 +3,10 @@ import { useState } from "react"
 const songs = [
     {
         id: 1,
-        title: "King of Glory Worship Song",
-        artist: "Flesh Blood Cross Worship",
-        url: "/songs/King of Glort Worship Song.wav",
-        duration: "5:15"
+        title: "Keep You Away",
+        artist: "EchoBR",
+        url: "/songs/Keep You Away.wav",
+        duration: "4:32",
     },
     {
         id: 2,
@@ -41,13 +41,34 @@ const songs = [
 export const useMusic = () => {
     // Hook logic here
     const [allSongs, setAllSongs] = useState(songs);
-    const [currentTrack, setCurrentTrack] = useState(null);
+    const [currentTrack, setCurrentTrack] = useState(songs[0]);
     const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+    const [currentTime, setCurrentTime] = useState(0);
+    const [duration, setDuration] = useState(0);
 
     const handlePlaySong = (song, index) => {
        setCurrentTrack(song);
        setCurrentTrackIndex(index);
     };
 
-    return { allSongs, handlePlaySong, currentTrackIndex, currentTrack };
+    const formatTime = (time) => {
+        if (isNaN(time) || time === undefined) return "0:00";
+
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60);
+
+        return `${minutes}:${seconds.toString().padStart(2, "0")}`;
+    }
+
+    return { 
+        allSongs,
+        handlePlaySong,
+        currentTrackIndex,
+        currentTrack, 
+        currentTime, 
+        setCurrentTime, 
+        formatTime,
+        duration,
+        setDuration,
+    };
 };
