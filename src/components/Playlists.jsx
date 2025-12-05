@@ -1,4 +1,4 @@
 
 export const Playlists = () => {
-    return <div></div>
+    return <div>Playlists</div>
 };
