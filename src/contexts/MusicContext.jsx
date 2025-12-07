@@ -5,38 +5,38 @@ const MusicContext = createContext();
 const songs = [
     {
         id: 1,
-        title: "Escaladizzy",
-        artist: "Mavo ft Wave$tar",
-        url: "/songs/Escaladizzy.wav",
+        title: "Doings",
+        artist: "Flavour",
+        url: "/songs/Doings.wav",
         duration: "2:52",
     },
     {
         id: 2,
-        title: "Breaching",
-        artist: "EchoDB",
-        url: "/songs/Breaching.wav",
-        duration: "10:35"
+        title: "Escaladizzy",
+        artist: "Mavo ft Wave$tarB",
+        url: "/songs/Escaladizzy.wav",
+        duration: "2:52"
     },
     {
         id: 3,
-        title: "Shift",
-        artist: "Red Worship",
-        url: "/songs/Shift.wav",
-        duration: "4:58"
+        title: "Game Changer",
+        artist: "Flavour",
+        url: "/songs/Game Changer.wav",
+        duration: "2:48"
     },
     {
         id: 4,
-        title: "Wind Of The Lord",
-        artist: "Victoria Orenze",
-        url: "/songs/WIND OF THE LORD.wav",
-        duration: "13:42"
+        title: "Levels",
+        artist: "Flavour",
+        url: "/songs/Levels.wav",
+        duration: "3:25"
     },
     {
         id: 5,
-        title: "Yahweh Will Manifest Himself",
-        artist: "Deeper Worship",
-        url: "/songs/Yahweh Will Manifest Himself.wav",
-        duration: "10:14"
+        title: "Men Dey",
+        artist: "Anyidons",
+        url: "/songs/Men Dey.wav",
+        duration: "3:24"
     },
 ];
 
