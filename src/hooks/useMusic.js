@@ -6,7 +6,7 @@ const songs = [
         title: "Escaladizzy",
         artist: "Mavo ft Wave$tar",
         url: "/songs/Escaladizzy.wav",
-        duration: "4:32",
+        duration: "2:52",
     },
     {
         id: 2,
@@ -58,6 +58,7 @@ export const useMusic = () => {
             setCurrentTrack(allSongs[nextIndex]);
             return nextIndex;
         });
+        setIsPlaying(false);
     };
 
     const prevTrack = () => {
@@ -66,6 +67,7 @@ export const useMusic = () => {
             setCurrentTrack(allSongs[nextIndex]);
             return nextIndex;
         });
+        setIsPlaying(false);
     };
 
     const formatTime = (time) => {
