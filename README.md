@@ -1,3 +1,43 @@
+# React Music Player
+
+A simple and modern music player built with React and Vite.  
+It lets you play songs, view progress, switch tracks, control volume, and manage playlists.
+
+---
+
+## How to Use
+
+- Select a song from the **All Songs** list to start playing.  
+- Use the **Play / Pause**, **Next**, and **Previous** buttons to control playback.  
+- Drag the **progress bar** to seek through the track.  
+- Adjust the **volume slider** to change the audio level.  
+- Create playlists and add songs to organize your music.
+
+---
+
+## Run the App Locally
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the dev server:
+
+```bash
+npm run dev
+```
+
+Download and place songs into:
+```swift
+public/songs/
+```
+
+
+---
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
