@@ -90,6 +90,17 @@ export const MusicProvider = ({children}) => {
             };
             setPlaylists((prev) => [...playlists, newPlaylist]);
         };
+
+        const addSongToPlaylist = (playlistId, song) => {
+            setPlaylists((prev) => prev.map((playlist) => {
+                    if (playlist.id === playlistId) {
+                        return { ...playlist, songs: [...playlist.songs, song] }
+                    } 
+                    else {
+                        return playlist;
+                    }
+                }));
+        };
     
         const play = () => setIsPlaying(true);
         const pause = () => setIsPlaying(false);
@@ -99,7 +110,8 @@ export const MusicProvider = ({children}) => {
         allSongs,
         handlePlaySong,
         currentTrackIndex,
-        currentTrack, 
+        currentTrack,
+        setCurrentTrack,
         currentTime, 
         setCurrentTime, 
         formatTime,
@@ -114,6 +126,7 @@ export const MusicProvider = ({children}) => {
         setVolume,
         createPlaylist,
         playlists,
+        addSongToPlaylist,
         }}
     >
         {children}
